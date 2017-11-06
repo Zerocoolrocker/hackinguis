@@ -15,12 +15,6 @@ cd hackinguis
 pip install -r requirements.txt
 python setup.py install
 ```
-__________________________________________________________
-
-## Modules:
-
-### human_mouse
-Human mouse is a library to performs human inputs mouse movements. It's built on top of [autopy's mouse module](https://github.com/mondeja/autopy_mouse).
 
 _________________________________________________________
 
@@ -79,7 +73,7 @@ m = PyMouse()
 m.scroll(vertical=<int>,   # Mouse scroll a number of times, 
          horizontal=<int>) # parameters are None by default
 
-m.screen_size() # Gets (width, height) of your screen
+m.screen_size()            # Gets (width, height) of your screen
 ```
 
 
