@@ -33,7 +33,7 @@ from hackinguis import HumanMouse
 hm = HumanMouse()
 
 """
-This class have the following optional parameters:
+This class has the following optional parameters:
 
     :param mouse_speed: Mouse velocity
         (optional, default == 18)
@@ -54,8 +54,32 @@ This class have the following optional parameters:
     :type target_error: int/float
 """
 
-hm.move(200, 300)
-hm.click(500, 500)
-hm.double_click(300, 300)
+hm.move(<x>, <y>)          # Human-like movement
+hm.click(<x>, <y>)         # Human-like movement and click
+hm.double_click(<x>, <y>)  # Human-like movement and double click
 ```
+
+### Virtual mouse
+These are the fastest functions tested for working with machine-like mouse behavior ([autopy mouse reference](http://www.autopy.org/documentation/api-reference/mouse.html)).
+
+```python
+from autopy_mouse import mouse
+
+mouse.click(<x>, <y>)       # Click without previous movement
+mouse.move(<x>, <y>)        # Mouse teleportation
+mouse.get_pos()             # Get current mouse position
+mouse.toggle(<bool>)        # Holds down (True) or releases (False) mouse
+mouse.smooth_move(<x>, <y>) # Mouse movement in a straight line
+
+# ==========================================================
+
+from pymouse import PyMouse
+m = PyMouse()
+
+m.scroll(vertical=<int>,   # Mouse scroll a number of times, 
+         horizontal=<int>) # parameters are None by default
+
+m.screen_size() # Gets (width, height) of your screen
+```
+
 
